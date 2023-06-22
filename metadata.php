@@ -23,8 +23,8 @@ $aModule = [
     'blocks'      => [
         [
             'template' => 'article_main.tpl',
-            'block'    => 'admin_article_main_extended',
-            'file'     => 'admin_article_main_extended.tpl'
+            'block'    => 'admin_article_main_form',
+            'file'     => 'admin_article_main_form.tpl'
         ]
     ],
     'extend' => [
