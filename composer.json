@@ -1,7 +1,6 @@
 {
   "name": "fc/fcprofitmargin",
   "description": "description",
-  "minimum-stability": "stable",
   "license": "proprietary",
   "type": "oxideshop-module",
   "extra": {
@@ -11,7 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Fatchip\\AddressValidation\\": "./"
+      "Fatchip\\ProfitMargin\\": "./"
     }
   }
 }

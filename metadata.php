@@ -20,9 +20,15 @@ $aModule = [
     ],
     'version'     => '1.0.0',
     'author'      => 'FC-Sebastian',
-    'extend'      => [
-    ],
     'blocks'      => [
+        [
+            'template' => 'article_main.tpl',
+            'block'    => 'admin_article_main_extended',
+            'file'     => 'admin_article_main_extended.tpl'
+        ]
+    ],
+    'extend' => [
+        OxidEsales\Eshop\Application\Model\Article::class => Fatchip\ProfitMargin\extend\Application\Model\Article::class
     ],
     'events'      => [
     ],
