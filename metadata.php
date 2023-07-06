@@ -25,6 +25,11 @@ $aModule = [
             'template' => 'article_main.tpl',
             'block'    => 'admin_article_main_form',
             'file'     => 'admin_article_main_form.tpl'
+        ],
+        [
+            'template' => 'article_list.tpl',
+            'block'    => 'admin_article_list_item',
+            'file'     => 'admin_article_list_item.tpl'
         ]
     ],
     'extend' => [

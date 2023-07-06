@@ -1,19 +1,20 @@
 [{$smarty.block.parent}]
-[{if (!is_null($edit->oxarticles__oxid->value))}]
+[{assign var=dFcProfit value=$edit->fcGetProfit()}]
+[{if ($dFcProfit !== null)}]
     <tr>
         <td class="edittext">
-            [{oxmultilang ident="FATCHIP_ARTICLE_PROFIT"}]&nbsp;
+            [{oxmultilang ident="FCPROFITMARGIN_PROFIT"}]&nbsp;
         </td>
-        <td class="edittext">
-            [{$edit->fcGetProfit()}]
+        <td class="edittext [{if ($dFcProfit <= 0)}] error [{/if}]">
+            [{$dFcProfit}]
         </td>
     </tr>
     <tr>
         <td class="edittext">
-            [{oxmultilang ident="FATCHIP_ARTICLE_PROFIT_MARGIN"}]&nbsp;
+            [{oxmultilang ident="FCPROFITMARGIN_PROFIT_MARGIN"}]&nbsp;
         </td>
-        <td class="edittext">
-            [{$edit->fcGetProfitMargin()}]
+        <td class="edittext [{if ($dFcProfit <= 0)}] error [{/if}]">
+            [{$edit->fcGetProfitMargin()}]%
         </td>
     </tr>
 [{/if}]

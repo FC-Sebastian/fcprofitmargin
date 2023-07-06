@@ -20,7 +20,7 @@ class Article extends Article_Parent
         $dProfit = $this->fcGetProfit();
 
         if ($dProfit !== null) {
-            return round(($dProfit / $this->getPrice()->getNettoPrice())*100, 2);
+            return round(($dProfit / $this->getPrice()->getNettoPrice()) * 100, 2);
         }
     }
 }
