@@ -22,5 +22,6 @@ class Article extends Article_Parent
         if ($dProfit !== null) {
             return round(($dProfit / $this->getPrice()->getNettoPrice()) * 100, 2);
         }
+        return null;
     }
 }

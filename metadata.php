@@ -30,6 +30,11 @@ $aModule = [
             'template' => 'article_list.tpl',
             'block'    => 'admin_article_list_item',
             'file'     => 'admin_article_list_item.tpl'
+        ],
+        [
+            'template' => 'article_list.tpl',
+            'block'    => 'admin_article_list_colgroup',
+            'file'     => 'admin_article_list_colgroup.tpl'
         ]
     ],
     'extend' => [
