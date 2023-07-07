@@ -6,7 +6,7 @@
             [{oxmultilang ident="FCPROFITMARGIN_PROFIT"}]&nbsp;
         </td>
         <td class="edittext [{if ($dFcProfit <= 0)}] error [{/if}]">
-            [{$dFcProfit}]
+            [{$edit->fcGetFormatted('profit')}] [{$oActCur->sign}]
         </td>
     </tr>
     <tr>
@@ -14,7 +14,7 @@
             [{oxmultilang ident="FCPROFITMARGIN_PROFIT_MARGIN"}]:&nbsp;
         </td>
         <td class="edittext [{if ($dFcProfit <= 0)}] error [{/if}]">
-            [{$edit->fcGetProfitMargin()}]%
+            [{$edit->fcGetFormatted('profitMargin')}]%
         </td>
     </tr>
 [{/if}]

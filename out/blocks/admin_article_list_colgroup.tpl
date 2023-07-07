@@ -6,6 +6,13 @@
 <col width="2%">
 
 <script type="text/javascript" defer>
+    /**
+     * Appends td element to given element
+     *
+     * @param element
+     * @param className
+     * @param innerHtml
+     */
     function fcAppendColumn (element, className, innerHtml) {
         let fcColumn = document.createElement('td');
         fcColumn.className = className;
@@ -13,6 +20,14 @@
         element.after(fcColumn);
     }
 
+    /**
+     * Builds and returns link element for oxid backend list
+     *
+     * @param oxid
+     * @param className
+     * @param innerHtml
+     * @returns {HTMLAnchorElement}
+     */
     function fcGetLinkElement(oxid , className, innerHtml = '[{oxmultilang ident="FCPROFITMARGIN_PROFIT_NULL"}]') {
         let fcLinkDiv = document.createElement('a');
         fcLinkDiv.href = "Javascript:top.oxid.admin.editThis('" + oxid + "')";
@@ -21,6 +36,7 @@
         return fcLinkDiv;
     }
 
+    //appending to window.onload event
     let fcOldHandler = window.onload;
     window.onload = function (e) {
         fcOldHandler(e);

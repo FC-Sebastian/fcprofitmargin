@@ -6,5 +6,7 @@
         fcGetLinkElement(
             '[{$listitem->oxarticles__oxid->value}]',
             '[{if $listitem->oxarticles__oxid->value != $oxid && $listitem->fcGetProfit() < 0}]error[{/if}]'
-            [{if $listitem->fcGetProfitMargin() !== null}], '[{$listitem->fcGetProfitMargin()}]%'[{/if}]));
+            [{if $listitem->fcGetProfitMargin() !== null}], '[{$listitem->fcGetFormatted('profitMargin')}]%'[{/if}]
+        )
+    );
 </script>
